@@ -6,11 +6,12 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:23:07 by jgo               #+#    #+#             */
-/*   Updated: 2023/07/18 13:30:51 by jgo              ###   ########.fr       */
+/*   Updated: 2023/07/18 13:38:10 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iomanip>
+#include <cstdlib>
 #include "Array.hpp"
 
 static inline void printArray(void) {

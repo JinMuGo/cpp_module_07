@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 15:41:24 by jgo               #+#    #+#             */
-/*   Updated: 2023/07/17 16:12:08 by jgo              ###   ########.fr       */
+/*   Updated: 2023/07/18 13:36:06 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ static inline void myTest(void) {
 int main(void) {
 	printIter();
 	myTest();
-	return (EXIT_SUCCESS);
+	return (0);
 }
