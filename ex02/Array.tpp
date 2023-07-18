@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:22:38 by jgo               #+#    #+#             */
-/*   Updated: 2023/07/18 13:30:53 by jgo              ###   ########.fr       */
+/*   Updated: 2023/07/18 18:01:38 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,14 @@ Array<T>::Array(void) : arr_(NULL), size_(0) {
 template <class T>
 Array<T>::Array(const unsigned int& n) : size_(n) {
 	std::cout << ARR_CTOR << std::endl;
+	this->arr_ = new T[n];
+}
+
+template <class T>
+Array<T>::Array(const int& n) : size_(n) {
+	std::cout << ARR_CTOR << std::endl;
+	if (n < 0)
+		throw Array<T>::CantNegativeException();
 	this->arr_ = new T[n];
 }
 
@@ -80,6 +88,11 @@ std::size_t Array<T>::size() const {
 template <class T>
 const char* Array<T>::OutOfRangeException::what() const throw() {
 	return ("Out of Range!");
+}
+
+template <class T>
+const char* Array<T>::CantNegativeException::what() const throw() {
+	return ("the argument can\'t negative!");
 }
 
 #endif

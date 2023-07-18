@@ -6,12 +6,12 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:23:07 by jgo               #+#    #+#             */
-/*   Updated: 2023/07/18 13:38:10 by jgo              ###   ########.fr       */
+/*   Updated: 2023/07/18 17:37:00 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iomanip>
 #include <cstdlib>
+#include <iomanip>
 #include "Array.hpp"
 
 static inline void printArray(void) {
@@ -74,11 +74,17 @@ static inline void myTest(void) {
 	std::cout << std::endl;
 }
 
+static inline void exceptionTest(void) {
+	Array<int> test(3);
+	test[4] = 4242;
+}
+
 int main(void) {
 	printArray();
 	try {
 		std::cout << "\n===== myTest =====\n" << std::endl;
 		myTest();
+		exceptionTest();
 	} catch (const std::exception& e) {
 		std::cerr << e.what() << '\n';
 	}

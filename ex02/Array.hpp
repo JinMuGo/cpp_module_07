@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:23:40 by jgo               #+#    #+#             */
-/*   Updated: 2023/07/18 13:30:55 by jgo              ###   ########.fr       */
+/*   Updated: 2023/07/19 08:32:10 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,15 @@ class Array {
 		virtual const char* what() const throw();
 	};
 
+	class CantNegativeException : public std::exception {
+	   public:
+		virtual const char* what() const throw();
+	};
+
    public:
 	Array();
-	Array(const unsigned int& n);
+	explicit Array(const unsigned int& n);
+	explicit Array(const int& n);
 	Array(const Array& obj);
 	~Array();
 	std::size_t size() const;

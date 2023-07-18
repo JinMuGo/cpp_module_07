@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 15:41:24 by jgo               #+#    #+#             */
-/*   Updated: 2023/07/18 13:36:06 by jgo              ###   ########.fr       */
+/*   Updated: 2023/07/19 06:34:49 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,21 @@ static inline void myTest(void) {
 	const int iArr[] = {4, 2, 2, 4};
 	const float fArr[] = {13.23f, 15.41f, 59.39999999f};
 
-	::iter(sArr, sizeof(sArr) / sizeof(sArr[0]), printElem);
+	::iter(sArr, sizeof(sArr) / sizeof(sArr[0]), printElem<std::string>);
 	std::cout << std::endl;
-	::iter(iArr, sizeof(iArr) / sizeof(iArr[0]), printElem);
+	::iter(iArr, sizeof(iArr) / sizeof(iArr[0]), printElem<int>);
 	std::cout << std::endl;
-	::iter(fArr, sizeof(fArr) / sizeof(fArr[0]), printElem);
+	::iter(fArr, sizeof(fArr) / sizeof(fArr[0]), printElem<float>);
 	std::cout << std::endl;
+
+	// Test<float> tete;
+	// ::iter(fArr, sizeof(fArr) / sizeof(fArr[0]), tete);
+	// std::cout << std::endl;
+
+	Test2<int> test[10];
+	Test2<int>::last_ = 0;
+	::iter(test, 10, &Test2<int>::print);
+	// std::cout << std::endl;
 }
 
 int main(void) {
