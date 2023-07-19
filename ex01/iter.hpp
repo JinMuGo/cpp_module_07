@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 15:41:48 by jgo               #+#    #+#             */
-/*   Updated: 2023/07/19 06:34:40 by jgo              ###   ########.fr       */
+/*   Updated: 2023/07/19 09:20:00 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,22 +36,6 @@ void printElem(const T& elem) {
 // 		std::cout << elem << " ";
 // 	};
 // };
-
-template <class T>
-class Test2
-{
-private:
-	int val_;
-public:
-	static int last_;
-	Test2() {
-		val_ = ++last_;
-	}
-	
-	void print() {
-		std::cout << val_ << std::endl;
-	}
-};
 
 
 #endif

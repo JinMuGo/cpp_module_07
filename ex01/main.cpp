@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 15:41:24 by jgo               #+#    #+#             */
-/*   Updated: 2023/07/19 06:34:49 by jgo              ###   ########.fr       */
+/*   Updated: 2023/07/19 09:20:30 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,8 @@ static inline void myTest(void) {
 	::iter(fArr, sizeof(fArr) / sizeof(fArr[0]), printElem<float>);
 	std::cout << std::endl;
 
-	// Test<float> tete;
-	// ::iter(fArr, sizeof(fArr) / sizeof(fArr[0]), tete);
-	// std::cout << std::endl;
-
-	Test2<int> test[10];
-	Test2<int>::last_ = 0;
-	::iter(test, 10, &Test2<int>::print);
+	// Test<float> test;
+	// ::iter(fArr, sizeof(fArr) / sizeof(fArr[0]), test);
 	// std::cout << std::endl;
 }
 
