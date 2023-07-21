@@ -6,7 +6,7 @@
 /*   By: jgo <jgo@student.42seoul.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 16:23:07 by jgo               #+#    #+#             */
-/*   Updated: 2023/07/18 17:37:00 by jgo              ###   ########.fr       */
+/*   Updated: 2023/07/21 22:22:06 by jgo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,6 @@ int main(void) {
 	} catch (const std::exception& e) {
 		std::cerr << e.what() << '\n';
 	}
-	system("leaks Array");
+	// system("leaks Array");
 	return (0);
 }
